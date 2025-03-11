@@ -1,5 +1,6 @@
 import PropertyHeaderImage from '@/components/PropertyHeaderImage';
 import PropertyDetails from '@/components/PropertyDetails';
+import PropertyImages from '@/components/PropertyImages';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 import connectDB from '@/config/database';
@@ -28,6 +29,7 @@ const AddPropertyPage = async ({ params }) => {
 					</div>
 				</div>
 			</section>
+			<PropertyImages images={property.images} />
 		</>
 	);
 };

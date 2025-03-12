@@ -94,7 +94,7 @@ const PropertyDetails = ({ property }) => {
 				</ul>
 			</div>
 			{/* <!-- Map --> */}
-			<div className='bg-white p-6 rounded-lg shadow-md mt-6'>
+			<div className='bg-white p-6 rounded-lg shadow-md mt-6 h-[400px]'>
 				<PropertyMap property={property} />
 			</div>
 		</main>

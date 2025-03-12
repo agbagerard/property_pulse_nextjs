@@ -15,6 +15,7 @@ const MainLayout = ({ children }) => {
 	return (
 		<AuthProvider>
 			<html>
+				{/* //Google GeoCoding API and Leaflet. */}
 				<head>
 					<link
 						rel='stylesheet'

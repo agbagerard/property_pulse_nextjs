@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Script from 'next/script';
 import LoadingPage from '@/app/loading';
 
+//Google GeoCoding API and Leaflet.
+
 function PropertyMap({ property }) {
 	const [coords, setCoords] = useState(null);
 	const {

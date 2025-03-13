@@ -3,7 +3,7 @@ import PropertyCard from '@/components/PropertyCard';
 import connectDB from '@/config/database';
 import Property from '@/models/Property';
 import { convertToSerializableObject } from '@/utils/convertToObject';
-import { FaArrowAltCircleLeft, FaArrowCircleLeft } from 'react-icons/fa';
+import { FaArrowCircleLeft } from 'react-icons/fa';
 import PropertySearchForm from '@/components/PropertySearchForm';
 
 const SearchResultsPage = async ({
@@ -30,8 +30,7 @@ const SearchResultsPage = async ({
 	}
 
 	const propertiesQueryResults = await Property.find(query).lean();
-	const properties = convertToSerializableObject(propertiesQueryResults);
-	console.log(properties);
+	const properties = propertiesQueryResults.map(convertToSerializableObject);
 
 	return (
 		<>
@@ -49,12 +48,12 @@ const SearchResultsPage = async ({
 					</Link>
 					<h1 className='text-2xl mb-4'>Search Results</h1>
 					{properties.length === 0 ? (
-						<p>No search results</p>
+						<p>No search results found</p>
 					) : (
 						<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-							{properties.map((property) => {
-								<PropertyCard key={property._id} property={property} />;
-							})}
+							{properties.map((property) => (
+								<PropertyCard key={property._id} property={property} />
+							))}
 						</div>
 					)}
 				</div>

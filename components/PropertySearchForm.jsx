@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
-const PropertySearchForm = async () => {
+const PropertySearchForm = () => {
 	const [location, setLocation] = useState('');
 	const [propertyType, setPropertyType] = useState('All');
 
@@ -30,7 +30,7 @@ const PropertySearchForm = async () => {
 				<input
 					type='text'
 					id='location'
-					placeholder='Enter Location (City, State, Zip, etc'
+					placeholder='Enter Location (City, State, Zip, etc)'
 					className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-blue-500'
 					value={location}
 					onChange={(e) => setLocation(e.target.value)}

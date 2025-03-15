@@ -1,5 +1,5 @@
 import PropertyCard from '@/components/PropertyCard';
-import Pagination from '@/components/pagination';
+import Pagination from '@/components/Pagination';
 import connectDB from '@/config/database';
 import Property from '@/models/Property';
 

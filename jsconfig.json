@@ -1,9 +1,9 @@
-// tsconfig.json example
 {
 	"compilerOptions": {
-		"baseUrl": ".",
+		"baseUrl": "src/",
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/styles/*": ["styles/*"],
+			"@/components/*": ["components/*"]
 		}
 	}
 }

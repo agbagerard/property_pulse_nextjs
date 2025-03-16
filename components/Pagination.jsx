@@ -19,7 +19,7 @@ const Pagination = ({ page, pageSize, totalItems }) => {
 
 			{page < totalPages ? (
 				<Link
-					href={`/properties?page=${page - 1}`}
+					href={`/properties?page=${page + 1}`}
 					className='ml-2 px-2 py-1 border border-gray-300 rounded'>
 					Next
 				</Link>
